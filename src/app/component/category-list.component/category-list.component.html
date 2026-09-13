@@ -1,0 +1,24 @@
+<p>category-list.component works!</p>
+
+<button type="button" (click)="getAll()"> Buscar</button>
+
+<table class="table table-dark">
+  <th>Id</th>
+  <th>Name</th>
+  <th>Slug</th>
+
+  <tbody>
+    @for (category of categories(); track $index) {
+    <tr>
+      <td>{{category.id}}</td>
+      <td>{{category.name}}</td>
+      <td>{{category.slug}}</td>
+    </tr>
+    }
+  </tbody>
+
+  <tfoot>
+
+  </tfoot>
+
+</table>
