@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Category } from '../../model/category';
 import { CategoryService } from './../../service/category.service';
 import { Component, inject, OnInit, signal } from '@angular/core';
@@ -15,12 +16,17 @@ export class CategoryListComponent implements OnInit{
   public categories = signal<Category[]>([]);
 
   private categoryService = inject(CategoryService)
+  private router = inject(Router)
   /*constructor(private categoryService: CategoryService){
     this.getAll()
   }*/
 
   ngOnInit(): void {
     this.getAll();
+  }
+
+  new(){
+    this.router.navigate(['categories/details'])
   }
 
   getAll(){

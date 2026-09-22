@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+.title{
+  font-size: xx-large;
+  font-weight: bold;
+  color:#691457;
+}
+
+.btn-size{
+  width: 100px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.btng{
+  text-align: right;
+}
